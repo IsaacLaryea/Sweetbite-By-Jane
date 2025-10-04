@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#ff6b6b" />
+    <title>Sweet Bite By Jane - Cakes & Desserts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img
+            src="logo.jpg"
+            alt="Sweetbite by Jane Logo"
+            style="
+              height: 80px;
+              width: auto;
+              display: inline-block;
+              vertical-align: middle;
+            "
+          />
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#catalog" class="nav-link">Cakes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#contact"
+              class="nav-link contact-cta"
+              onclick="scrollToContact()"
+            >
+              <i class="fas fa-phone"></i>
+              Contact Us
+            </a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Cakes Made with Love</h1>
+        <p class="hero-subtitle">
+          Handcrafted cakes, made fresh daily with the finest ingredients and a
+          touch of love.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary" onclick="scrollToContact()"
+            >Contact Us</a
+          >
+          <a href="#catalog" class="btn btn-secondary">View Cakes</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="cake-showcase">
+          <div class="cake-item cake-1"></div>
+          <div class="cake-item cake-2"></div>
+          <div class="cake-item cake-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About Sweet Bite by Jane</h2>
+            <p>
+              Welcome to Sweet Bite by Jane, where every cake tells a story. I'm
+              Janet, a passionate baker who creates beautiful, delicious cakes
+              for life's special moments.
+            </p>
+            <p>
+              From elegant wedding cakes to playful birthday treats, each
+              creation is made with love, attention to detail, and the finest
+              ingredients. Every order is custom-made to your specifications,
+              ensuring your celebration is as unique as you are.
+            </p>
+            <div class="features">
+              <div class="feature">
+                <i class="fas fa-heart"></i>
+                <h3>Made with Love</h3>
+                <p>Every cake is crafted with passion and care</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-leaf"></i>
+                <h3>Fresh Ingredients</h3>
+                <p>Only the finest, freshest ingredients used</p>
+              </div>
+              <div class="feature">
+                <i class="fas fa-palette"></i>
+                <h3>Custom Designs</h3>
+                <p>Personalized to match your vision perfectly</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <div
+              class="image-placeholder"
+              style="display: flex; flex-direction: column; align-items: center"
+            >
+              <div
+                style="
+                  position: relative;
+                  width: 180px;
+                  height: 180px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <span
+                  style="
+                    position: absolute;
+                    width: 180px;
+                    height: 180px;
+                    background: #ffb6c1;
+                    border-radius: 50%;
+                    z-index: 1;
+                  "
+                ></span>
+                <img
+                  src="JAnet.jpg"
+                  alt="Janet, Master Baker"
+                  style="
+                    width: 170px;
+                    height: 170px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+                    z-index: 2;
+                    position: relative;
+                    border: 4px solid #fff;
+                  "
+                />
+              </div>
+              <p
+                style="
+                  margin: 0.5rem 0 0 0;
+                  font-weight: 600;
+                  color: #ffffff;
+                  text-align: center;
+                "
+              >
+                Janet, Master Baker
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="catalog">
+      <div class="container">
+        <h2>Our Cake Collection</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn" data-filter="birthday">
+            Birthday Cakes
+          </button>
+          <button class="filter-btn" data-filter="combo">Combo Deals</button>
+          <button class="filter-btn" data-filter="cupcake">Cupcakes</button>
+          <button class="filter-btn" data-filter="slicecake">Slice Cake</button>
+          <button class="filter-btn" data-filter="parfait">
+            Small Size Cake Parfait
+          </button>
+        </div>
+        <h3
+          id="cakesSectionTitle"
+          class="cakes-section-title"
+          style="
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #d35400;
+            display: block;
+          "
+        ></h3>
+        <div class="cakes-grid" id="cakesGrid">
+          <!-- Cakes will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Ready to Order Your Perfect Cake?</h2>
+        <p class="contact-intro">
+          Contact us directly to discuss your custom cake needs. She loves
+          creating unique designs for your special occasions!
+        </p>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Call</h3>
+                <p>Speak directly with us about your order</p>
+                <a href="tel:+233257340170" class="contact-link"
+                  >+233 257340170</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-snapchat"></i>
+              <div>
+                <h3>Snapchat</h3>
+                <p>Follow for daily cake updates and behind-the-scenes</p>
+                <a
+                  href="https://snapchat.com/add/janetappiah.04"
+                  class="contact-link"
+                  >@janetappiah.04</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Business Hours</h3>
+                <p>Monday - Sunday: 7AM - 9PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form" style="text-align: center">
+            <h3>Send Us a Message</h3>
+            <p>
+              Click the button below to chat with Jane directly on WhatsApp
+              about your cake vision!
+            </p>
+            <a
+              href="https://wa.me/233257340170"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary btn-large"
+              style="display: inline-block; margin-top: 1rem"
+            >
+              <i class="fab fa-whatsapp"></i> Send a Message to Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Sweet Bite by Jane</h3>
+            <p>Creating sweet memories, one cake at a time.</p>
+            <div class="social-links">
+              <a href="https://snapchat.com/add/janetappiah.04"
+                ><i class="fab fa-snapchat"></i
+              ></a>
+              <a href="tel:+233257340170"><i class="fas fa-phone"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#catalog">Cakes</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Wedding Cakes</a></li>
+              <li><a href="#">Birthday Cakes</a></li>
+              <li><a href="#">Custom Orders</a></li>
+              <li><a href="#">Delivery</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-phone"></i> 0257340170</p>
+            <p><i class="fab fa-snapchat"></i> @janetappiah.04</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sweet Bite by Jane. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
