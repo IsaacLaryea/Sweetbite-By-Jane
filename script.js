@@ -368,11 +368,17 @@ function createCakeCard(cake) {
   ) {
     mediaHtml = `<img src="${cake.image}" alt="${cake.name}" style="width:100%;height:180px;object-fit:cover;border-radius:12px;background:#fff;" />`;
   } else if (cake.video) {
+    // Video loads and plays only after metadata is loaded
     mediaHtml = `
-      <video class="cake-video" style="width:100%;height:180px;object-fit:cover;border-radius:12px;" controls loop muted autoplay playsinline>
-        <source src="${cake.video}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <div style="width:100%;height:180px;display:flex;align-items:center;justify-content:center;position:relative;">
+        <video class="cake-video" style="width:100%;height:180px;object-fit:cover;border-radius:12px;display:none;" loop muted autoplay playsinline preload="auto">
+          <source src="${cake.video}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-loading" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;">
+          <span style="font-size:1.2rem;color:#888;">Loading video...</span>
+        </div>
+      </div>
     `;
   } else {
     mediaHtml = `<span style="font-size: 4rem;">${cake.image}</span>`;
@@ -395,6 +401,19 @@ function createCakeCard(cake) {
             </a>
         </div>
     `;
+
+  // Ensure videos are loaded before showing
+  setTimeout(() => {
+    const video = card.querySelector("video.cake-video");
+    const loadingDiv = card.querySelector(".video-loading");
+    if (video) {
+      video.addEventListener("loadeddata", () => {
+        video.style.display = "block";
+        if (loadingDiv) loadingDiv.style.display = "none";
+      });
+    }
+  }, 0);
+
   return card;
 }
 
