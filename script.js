@@ -10,6 +10,7 @@ const cakes = [
     price: 200.0,
     category: "combo",
     image: "🍽️",
+    video: "videos/pie and cake combo.mp4",
     flavors: ["Mixed Selection"],
     size: "Combo Pack",
     serves: "4-6 people",
@@ -22,6 +23,7 @@ const cakes = [
     price: 150.0,
     category: "combo",
     image: "🧁",
+    video: "videos/six cupcakes.mp4",
     flavors: ["Mixed Flavors"],
     size: "6 Cupcakes",
     serves: "6 people",
@@ -33,7 +35,7 @@ const cakes = [
       "Classic birthday cake, 6 inches, two layers. Customizable flavors and decorations.",
     price: 370.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/1.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "6 inches (2 layers)",
     serves: "6-8 people",
@@ -45,7 +47,7 @@ const cakes = [
       "Classic birthday cake, 8 inches, two layers. Customizable flavors and decorations.",
     price: 450.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/2.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "8 inches (2 layers)",
     serves: "10-14 people",
@@ -57,7 +59,7 @@ const cakes = [
       "Classic birthday cake, 10 inches, two layers. Customizable flavors and decorations.",
     price: 650.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/3.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "10 inches (2 layers)",
     serves: "16-20 people",
@@ -69,7 +71,7 @@ const cakes = [
       "Classic birthday cake, 12 inches, two layers. Customizable flavors and decorations.",
     price: 850.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/4.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "12 inches (2 layers)",
     serves: "22-28 people",
@@ -81,7 +83,7 @@ const cakes = [
       "Classic birthday cake, 6 inches, three layers. Customizable flavors and decorations.",
     price: 550.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/5.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "6 inches (3 layers)",
     serves: "8-10 people",
@@ -93,7 +95,7 @@ const cakes = [
       "Classic birthday cake, 8 inches, three layers. Customizable flavors and decorations.",
     price: 650.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/6.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "8 inches (3 layers)",
     serves: "12-16 people",
@@ -105,7 +107,7 @@ const cakes = [
       "Classic birthday cake, 10 inches, three layers. Customizable flavors and decorations.",
     price: 950.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/7.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "10 inches (3 layers)",
     serves: "18-24 people",
@@ -117,7 +119,7 @@ const cakes = [
       "Classic birthday cake, 12 inches, three layers. Customizable flavors and decorations.",
     price: 1250.0,
     category: "birthday",
-    image: "🎂",
+    image: "images/8.jpg",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "12 inches (3 layers)",
     serves: "26-34 people",
@@ -130,6 +132,7 @@ const cakes = [
     price: 150.0,
     category: "cupcake",
     image: "🧁",
+    video: "videos/six cupcakes.mp4",
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "6 Cupcakes",
     serves: "6 people",
@@ -141,7 +144,8 @@ const cakes = [
       "A box of 12 freshly baked cupcakes in assorted flavors. Great for parties and sharing!",
     price: 270.0,
     category: "cupcake",
-    image: "🧁",
+    image: "images/12c.jpg", // This is a picture, not an emoji
+    // Remove the video property for this cake
     flavors: ["Vanilla", "Chocolate", "Red Velvet", "Strawberry"],
     size: "12 Cupcakes",
     serves: "12 people",
@@ -153,7 +157,7 @@ const cakes = [
       "4 spring rolls, 3 samosa, 2 pie, 1 drink. Perfect for a quick snack or sharing!",
     price: 130.0,
     category: "combo",
-    image: "🥟",
+    image: "images/combo2.png", // This is a picture, not an emoji
     flavors: ["Assorted"],
     size: "Snack Combo",
     serves: "1-2 people",
@@ -166,6 +170,7 @@ const cakes = [
     price: 200.0,
     category: "combo",
     image: "🍰",
+    video: "videos/ib2c.mp4",
     flavors: ["Any flavor of your choice"],
     size: "1 Bento Cake + 2 Cupcakes",
     serves: "2-3 people",
@@ -178,98 +183,58 @@ const cakes = [
     price: 70.0,
     category: "combo",
     image: "🍮",
+    video: "videos/slice.mp4",
     flavors: ["Any flavor of your choice"],
     size: "Single Bowl",
     serves: "1 person",
   },
   {
     id: 16,
-    name: "Slice Cake - Chocolate",
-    description: "A delicious slice of rich chocolate cake.",
+    name: "Slice Cake - Chocolate, Vanilla or Red Velvet",
+    description:
+      "A delicious slice of rich chocolate, vanilla or red velvet cake.",
     price: 70.0,
     category: "slicecake",
     image: "🍫",
-    flavors: ["Chocolate"],
+    video: "videos/cake slice.mp4",
+    flavors: ["Chocolate, Vanilla, Red Velvet"],
     size: "1 Slice",
     serves: "1 person",
   },
   {
     id: 17,
-    name: "Slice Cake - Vanilla",
-    description: "A delicious slice of classic vanilla cake.",
-    price: 70.0,
-    category: "slicecake",
-    image: "🍰",
-    flavors: ["Vanilla"],
-    size: "1 Slice",
-    serves: "1 person",
-  },
-  {
-    id: 18,
-    name: "Slice Cake - Red Velvet",
-    description: "A delicious slice of red velvet cake.",
-    price: 70.0,
-    category: "slicecake",
-    image: "🧁",
-    flavors: ["Red Velvet"],
-    size: "1 Slice",
-    serves: "1 person",
-  },
-  {
-    id: 19,
     name: "Slice Cake - Mixed Flavours",
     description: "A slice with a mixture of all our cake flavours.",
     price: 70.0,
     category: "slicecake",
     image: "🍥",
+    video: "videos/slice.mp4",
     flavors: ["Chocolate", "Vanilla", "Red Velvet"],
     size: "1 Slice (Mixed)",
     serves: "1 person",
   },
   {
-    id: 20,
-    name: "Small Size Cake Parfait - Chocolate",
+    id: 18,
+    name: "Small Size Cake Parfait - Chocolate, Vanilla or Red Velvet",
     description:
       "A small cup of chocolate cake parfait. Perfect for a sweet treat!",
     price: 30.0,
     category: "parfait",
     image: "🍫",
-    flavors: ["Chocolate"],
+    video: "videos/parfait.mp4",
+    flavors: ["Chocolate, Vanilla, Red Velvet"],
     size: "Small Cup",
     serves: "1 person",
   },
   {
-    id: 21,
-    name: "Small Size Cake Parfait - Vanilla",
-    description:
-      "A small cup of vanilla cake parfait. Perfect for a sweet treat!",
-    price: 30.0,
-    category: "parfait",
-    image: "🍰",
-    flavors: ["Vanilla"],
-    size: "Small Cup",
-    serves: "1 person",
-  },
-  {
-    id: 22,
-    name: "Small Size Cake Parfait - Red Velvet",
-    description:
-      "A small cup of red velvet cake parfait. Perfect for a sweet treat!",
-    price: 30.0,
-    category: "parfait",
-    image: "🧁",
-    flavors: ["Red Velvet"],
-    size: "Small Cup",
-    serves: "1 person",
-  },
-  {
-    id: 23,
+    id: 19,
     name: "Small Size Cake Parfait - Mixed Flavours",
     description:
       "A small cup of parfait with a mixture of all our cake flavours.",
     price: 30.0,
     category: "parfait",
     image: "🍥",
+    video: "videos/mixed.mp4",
     flavors: ["Chocolate", "Vanilla", "Red Velvet"],
     size: "Small Cup (Mixed)",
     serves: "1 person",
@@ -393,9 +358,29 @@ function loadCakes() {
 function createCakeCard(cake) {
   const card = document.createElement("div");
   card.className = "cake-card";
+  let mediaHtml = "";
+
+  // Show image for birthday cakes, id 12, and id 13 if image is a file
+  if (
+    (cake.category === "birthday" || cake.id === 12 || cake.id === 13) &&
+    cake.image &&
+    cake.image.match(/\.(jpg|jpeg|png|gif)$/i)
+  ) {
+    mediaHtml = `<img src="${cake.image}" alt="${cake.name}" style="width:100%;height:180px;object-fit:cover;border-radius:12px;background:#fff;" />`;
+  } else if (cake.video) {
+    mediaHtml = `
+      <video class="cake-video" style="width:100%;height:180px;object-fit:cover;border-radius:12px;" controls loop muted autoplay playsinline>
+        <source src="${cake.video}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    `;
+  } else {
+    mediaHtml = `<span style="font-size: 4rem;">${cake.image}</span>`;
+  }
+
   card.innerHTML = `
-        <div class="cake-image">
-            <span style="font-size: 4rem;">${cake.image}</span>
+        <div class="cake-image" style="width:100%;height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+            ${mediaHtml}
         </div>
         <div class="cake-info">
             <h3 class="cake-name">${cake.name}</h3>
@@ -406,7 +391,7 @@ function createCakeCard(cake) {
             </div>
             <div class="cake-price">${cake.price.toFixed(0)} Cedis</div>
             <a href="#contact" class="contact-jane-btn" onclick="scrollToContact()">
-                <i class="fas fa-phone"></i> Contact Jane
+                <i class="fas fa-phone"></i> Contact Us
             </a>
         </div>
     `;
